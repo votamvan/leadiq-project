@@ -1,6 +1,6 @@
 # Project Title
 
-Solution for LeadIQ assetment
+Solution for LeadIQ assessment
 
 ## Getting Started
 
