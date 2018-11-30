@@ -1,0 +1,4 @@
+2018-11-30 08:42:17,724 INFO     [app.py:20] API server started
+2018-11-30 08:42:35,164 INFO     [homepage.py:20] POST /
+2018-11-30 08:42:35,167 INFO     [homepage.py:57] BODY <{"item0":0.1,"item1":0.2,"item2":0.3,"item3":0.4,"item4":0.5,"item5":0.6,"item6":0.7}>
+2018-11-30 08:42:35,174 DEBUG    [homepage.py:30] input_data <[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]>

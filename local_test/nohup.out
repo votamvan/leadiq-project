@@ -1,0 +1,26 @@
+rm: ../resources/output/*: No such file or directory
+[2018-11-30 08:42:16 +0000] [6] [INFO] Starting gunicorn 19.8.1
+[2018-11-30 08:42:16 +0000] [6] [INFO] Listening at: http://0.0.0.0:8080 (6)
+[2018-11-30 08:42:16 +0000] [6] [INFO] Using worker: gevent
+[2018-11-30 08:42:16 +0000] [10] [INFO] Booting worker with pid: 10
+Using TensorFlow backend.
+2018-11-30 08:42:17.352966: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense_1 (Dense)              (None, 50)                400       
+_________________________________________________________________
+dense_2 (Dense)              (None, 70)                3570      
+_________________________________________________________________
+dense_3 (Dense)              (None, 40)                2840      
+_________________________________________________________________
+dense_4 (Dense)              (None, 1)                 41        
+=================================================================
+Total params: 6,851
+Trainable params: 6,851
+Non-trainable params: 0
+_________________________________________________________________
+2018-11-30 08:42:17,724 INFO     [app.py:20] API server started
+2018-11-30 08:42:35,164 INFO     [homepage.py:20] POST /
+2018-11-30 08:42:35,167 INFO     [homepage.py:57] BODY <{"item0":0.1,"item1":0.2,"item2":0.3,"item3":0.4,"item4":0.5,"item5":0.6,"item6":0.7}>
+2018-11-30 08:42:35,174 DEBUG    [homepage.py:30] input_data <[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]>

@@ -13,29 +13,31 @@ The project needs Docker installed to train data and run API server, please refe
 
 ### Installing
 
-Step 0. Clone source from git
+Step 0. Clone source from git.
 
 ```
-cd /opt/
+cd /tmp/
 git clone https://github.com/github/leadiq-project.git
 ```
 
-Step 1. Train model
+Step 1. Train model.
 
 ```
-cd /opt/leadiq-project/
+cd /tmp/leadiq-project/
+chmod + x ./start-train.sh
 sudo ./start-train.sh
 ```
 
-Step2. Run the API server after finish the training phase
+Step2. Run the API server after finish the training phase.
 
 ```
+chmod +x ./start-server.sh
 sudo ./start-server.sh
 ```
 
-For trouble shouting, please check the log file in folders /opt/to seeEnd with an example of getting some data out of the system or using it for a little demo
+For trouble shouting, please check the log file in folders /tmp/ to see logs.
 ```
-ls -l  /opt/leadiq-project/resources/log
+ls -l  /tmp/leadiq-project/resources/log
 -rw-r--r--@ 1 votamvan  staff      376 Nov 30 11:14 server.log
 -rw-r--r--  1 votamvan  staff  1214322 Nov 30 11:31 train.log
 ```
