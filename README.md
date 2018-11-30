@@ -35,7 +35,7 @@ chmod +x ./start-server.sh
 sudo ./start-server.sh
 ```
 
-For trouble shouting, please check the log file in folders /tmp/leadiq-project/resources/log/ to see logs.
+For troubleshooting, please check the log file in folders /tmp/leadiq-project/resources/log/ to see logs.
 ```
 ls -l  /tmp/leadiq-project/resources/log
 -rw-r--r--@ 1 votamvan  staff      376 Nov 30 11:14 server.log
