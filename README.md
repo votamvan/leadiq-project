@@ -24,7 +24,7 @@ Step 1. Train model.
 
 ```
 cd /tmp/leadiq-project/
-chmod + x ./start-train.sh
+chmod +x ./start-train.sh
 sudo ./start-train.sh
 ```
 
