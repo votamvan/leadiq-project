@@ -5,10 +5,10 @@ import json
 import numpy as np
 import pandas as pd
 from keras import models
-from keras.layers import Dense
+from keras.layers import Dense, Dropout
 from sklearn.cross_validation import train_test_split
 from common import data_file, model_file, score_file
-from common import feature_labels, target_label, hidden_layers, epochs
+from common import feature_labels, target_label, hidden_layers, epochs, dropout
 
 # create deep learning model
 def create_model(hidden_layers):
@@ -19,6 +19,7 @@ def create_model(hidden_layers):
             _model.add(Dense(hidden_layers[i], activation='relu', input_dim=hidden_layers[0]))
         else:
             _model.add(Dense(hidden_layers[i], activation='relu'))
+        _model.add(Dropout(dropout))
 
     _model.add(Dense(hidden_layers[-1], activation="sigmoid"))
     _model.compile(optimizer='rmsprop', loss="binary_crossentropy", metrics=['accuracy'])
@@ -50,7 +51,7 @@ model = create_model(hidden_layers)
 history = model.fit(np.array(X_train), np.array(Y_train),
                     epochs=epochs,
                     validation_data=(np.array(X_val), np.array(Y_val)),
-                    verbose=0)
+                    verbose=1)
 model.save(model_file)
 
 # save accuracy score

@@ -14,8 +14,9 @@ score_file = os.path.join(base_dir, "model/score.json")
 # load hyperparameters
 with open(config_file, "r") as f:
     config_data = json.load(f)
-hidden_layers = config_data.get("hidden_layers" , [7, 50, 70, 40, 1])
+hidden_layers = config_data.get("hidden_layers" , [7, 1])
 epochs = config_data.get("epochs", 100)
+dropout = config_data.get("dropout", 0.3)
 target_label = "winner"
 feature_labels = [
     "item0",
